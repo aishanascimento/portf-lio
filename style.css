@@ -1,0 +1,406 @@
+body {
+    font-family: 'Segoe UI', Arial, sans-serif;
+    margin: 0;
+    background-color: lavenderblush; 
+    color: dimgray;
+    line-height: 1.7;
+    scroll-behavior: smooth;
+}
+
+body.escuro {
+    background-color: #111827;
+    color: #f8fafc;
+}
+
+body.escuro .cabecalho,
+body.escuro .secao,
+body.escuro .card,
+body.escuro .extra,
+body.escuro input,
+body.escuro textarea,
+body.escuro select {
+    background-color: #1f2937;
+    color: #f8fafc;
+    border-color: #374151;
+}
+
+.cabecalho {
+    background-color: white; 
+    padding: 20px 40px; 
+    display: flex;
+    justify-content: space-between; 
+    align-items: center;
+    box-shadow: 0 4px 15px rgba(255, 20, 147, 0.15); 
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.perfil-header {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.foto-perfil {
+    width: 75px; 
+    height: 75px;
+    border-radius: 50%;
+    border: 3px solid deeppink; 
+    object-fit: cover; 
+}
+
+.titulos h1 {
+    font-size: 24px;
+    margin: 0;
+    color: deeppink; 
+}
+
+.titulos p {
+    font-size: 14px;
+    margin: 0;
+    color: gray;
+}
+
+.btn-tema {
+    margin-top: 8px;
+    padding: 6px 12px;
+    background-color: deeppink;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+.btn-tema:hover {
+    background-color: hotpink;
+}
+
+.menu {
+    display: flex;
+    gap: 25px;
+}
+
+.menu a {
+    color: dimgray;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 16px;
+    transition: color 0.3s ease; 
+}
+
+.menu a:hover {
+    color: deeppink;
+}
+
+h2 {
+    color: deeppink; 
+    border-bottom: 2px solid pink;
+    padding-bottom: 10px;
+    margin-top: 0;
+}
+
+.secao {
+    background-color: white;
+    max-width: 900px;
+    margin: 40px auto;
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+.oculto, [hidden] {
+    display: none !important;
+}
+
+.cards {
+    display: flex;
+    gap: 25px;
+    flex-wrap: wrap;
+    margin-top: 20px;
+}
+
+.card {
+    background-color: white;
+    border: 1px solid pink; 
+    border-radius: 12px;
+    padding: 25px;
+    flex: 1;
+    min-width: 280px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    display: flex;
+    flex-direction: column;
+}
+
+.card h3 {
+    margin-top: 0;
+    color: deeppink; 
+}
+
+.tecnologias {
+    font-size: 14px;
+    font-weight: bold;
+    color: hotpink;
+    margin-bottom: 20px;
+}
+
+.botao {
+    display: inline-block;
+    padding: 12px 20px;
+    background-color: deeppink;
+    color: white;
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: bold;
+    text-align: center;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-top: 15px; 
+}
+
+.botao:hover:not(:disabled) {
+    background-color: hotpink;
+    transform: translateY(-2px); 
+}
+
+.botao:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+
+.remover {
+    background-color: #ef4444;
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: bold;
+    margin-top: 10px;
+    align-self: flex-start;
+}
+
+.remover:hover {
+    background-color: #dc2626;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+th {
+    background-color: deeppink;
+    color: white;
+    padding: 15px;
+}
+
+th, td {
+    border-bottom: 1px solid pink;
+    padding: 15px;
+    text-align: left;
+}
+
+tr:nth-child(even) {
+    background-color: snow;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.campo-grupo {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+label {
+    font-size: 14px;
+    font-weight: bold;
+    color: gray;
+}
+
+body.escuro label {
+    color: #d1d5db;
+}
+
+.obrigatorio {
+    color: deeppink;
+}
+
+input, textarea, select {
+    padding: 12px;
+    border: 1px solid pink;
+    border-radius: 8px;
+    font-size: 15px;
+    font-family: inherit;
+    transition: border-color 0.3s ease;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+input:focus, textarea:focus, select:focus {
+    outline: none;
+    border-color: deeppink; 
+}
+
+input[aria-invalid="true"], 
+textarea[aria-invalid="true"], 
+select[aria-invalid="true"] {
+    border: 2px solid #ef4444 !important;
+    background-color: #fff5f5;
+}
+
+body.escuro input[aria-invalid="true"],
+body.escuro textarea[aria-invalid="true"],
+body.escuro select[aria-invalid="true"] {
+    background-color: #3f1d24;
+}
+
+.mensagem-erro {
+    color: #ef4444;
+    font-size: 13px;
+    font-weight: bold;
+    min-height: 1.2em;
+}
+
+.dica {
+    color: #888;
+    font-size: 12px;
+}
+
+.campo-rodape {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.contador-caracteres {
+    color: #888;
+    font-size: 12px;
+    font-weight: bold;
+    margin-left: auto;
+}
+
+.contador-caracteres.limite-atingido {
+    color: #ef4444;
+}
+
+.resumo-erros {
+    background-color: #fef2f2;
+    border: 2px solid #ef4444;
+    border-radius: 8px;
+    padding: 15px;
+    color: #991b1b;
+}
+
+.resumo-erros h4 {
+    margin: 0 0 10px 0;
+}
+
+.resumo-erros ul {
+    margin: 0;
+    padding-left: 20px;
+}
+
+.resumo-erros a {
+    color: #991b1b;
+    text-decoration: underline;
+}
+
+.status-mensagem {
+    font-weight: bold;
+    min-height: 1.5em;
+    margin-top: 10px;
+}
+
+.status-mensagem[data-tipo="erro"] {
+    color: #ef4444;
+}
+
+.status-mensagem[data-tipo="sucesso"] {
+    color: #16a34a;
+}
+
+.status-mensagem[data-tipo="processando"] {
+    color: #2563eb;
+}
+
+.opcao-teste {
+    padding: 10px;
+    background-color: #fff0f5;
+    border: 1px dashed deeppink;
+    border-radius: 8px;
+}
+
+body.escuro .opcao-teste {
+    background-color: #2a1b24;
+}
+
+.rotulo-checkbox {
+    font-size: 13px;
+    color: #555;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+body.escuro .rotulo-checkbox {
+    color: #e5e7eb;
+}
+
+.rotulo-checkbox input {
+    width: auto;
+}
+
+.extra {
+    max-width: 900px;
+    margin: 0 auto 40px auto;
+    padding: 35px;
+    background-color: white;
+    border-left: 6px solid deeppink;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+.rodape {
+    text-align: center;
+    padding: 25px;
+    background-color: deeppink;
+    color: white;
+    font-size: 14px;
+}
+
+a:focus-visible, button:focus-visible, input:focus-visible,
+select:focus-visible, textarea:focus-visible {
+    outline: 3px solid #2563eb !important;
+    outline-offset: 2px;
+}
+
+@media (max-width: 768px) {
+    .cabecalho {
+        flex-direction: column;
+        padding: 25px;
+        gap: 15px;
+    }
+    .perfil-header {
+        flex-direction: column;
+        text-align: center;
+    }
+    .menu {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    .secao, .extra {
+        margin: 20px;
+        padding: 25px;
+    }
+}

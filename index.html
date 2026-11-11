@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfólio Aisha Ximena</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body id="topo">
+
+    <header class="cabecalho">
+        <div class="perfil-header">
+            <img src="foto.jpeg" alt="Foto de Aisha Ximena" class="foto-perfil">
+            <div class="titulos">
+                <h1>Aisha Ximena</h1>
+                <p>Engenharia de Software</p>
+                <button id="tema" type="button" class="btn-tema" aria-pressed="false">Alternar tema</button>
+            </div>
+        </div>
+        <nav class="menu" aria-label="Navegação principal">
+            <a href="#sobre">Sobre mim</a>
+            <a href="#conhecimentos">Conhecimentos</a>
+            <a href="#projetos">Projetos</a>
+            <a href="#contato">Contato</a>
+        </nav>
+    </header>
+
+    <main>
+        
+        <section id="sobre" class="secao">
+            <h2>Sobre mim</h2>
+            <p>
+                Meu nome é Aisha Ximena, sou estudante do segundo semestre de Engenharia de Software na Universidade Católica do Salvador (UCSAL). Tenho um forte interesse na área de tecnologia e busco constantemente construir uma base sólida de conhecimentos, aliando a teoria à prática. Atualmente, estou focada em aprofundar minha parte em programação e entender a estrutura por trás de sistemas robustos, ao mesmo tempo em que dou meus primeiros passos no desenvolvimento de interfaces web. Meu objetivo é adquirir cada vez mais conhecimentos para me formar como uma excelente profissional na área.
+            </p>
+        </section>
+
+        <section id="conhecimentos" class="secao">
+            <h2>Conhecimentos</h2>
+            
+            <p>Minha trajetória acadêmica tem me proporcionado uma visão abrangente sobre o desenvolvimento de software, desde a lógica estrutural até a construção de interfaces. Abaixo, destaco as disciplinas e tecnologias que formam a minha base atual:</p>
+            
+            <ul>
+                <li><strong>Linguagem Principal:</strong> Java (Lógica de Programação e Orientação a Objetos).</li>
+                <li><strong>Desenvolvimento Web:</strong> HTML Semântico e CSS (Programação Front-End).</li>
+                <li><strong>Base Estrutural (1º Semestre):</strong> Lógica de Programação e Algoritmos, Raciocínio Lógico, Arquitetura e Organização de Computadores, e Introdução à Engenharia de Software.</li>
+                <li><strong>Foco Atual (2º Semestre):</strong> Programação Orientada a Objetos (POO), Sistemas Operacionais e Processos de Software.</li>
+            </ul>
+
+            <table>
+                <thead>
+                    <tr>
+                        <th scope="col">Tecnologia</th>
+                        <th scope="col">Nível</th>
+                        <th scope="col">Onde aplico</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Java</td>
+                        <td>Estudando / Intermediário</td>
+                        <td>Construção de sistemas baseados em POO, como modelagem de dispositivos.</td>
+                    </tr>
+                    <tr>
+                        <td>HTML & CSS</td>
+                        <td>Iniciando</td>
+                        <td>Estruturação e estilização visual de páginas web (como este portfólio).</td>
+                    </tr>
+                    <tr>
+                        <td>Arquitetura e SO</td>
+                        <td>Teórico / Fundamentos</td>
+                        <td>Compreensão do funcionamento interno dos computadores e sistemas operacionais.</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <section id="projetos" class="secao">
+            <h2>Meus Projetos</h2>
+            
+            <form id="cadastro" novalidate>
+                <div class="campo-grupo">
+                    <label for="titulo">Nome do projeto</label>
+                    <input type="text" id="titulo" name="titulo" placeholder="Digite o nome do projeto" required minlength="3" autocomplete="off">
+                </div>
+                
+                <div class="campo-grupo">
+                    <label for="categoria">Categoria</label>
+                    <select id="categoria" name="categoria">
+                        <option value="web">Web</option>
+                        <option value="mobile">Mobile</option>
+                    </select>
+                </div>
+                
+                <button type="submit" class="botao">Adicionar projeto</button>
+            </form>
+
+            <div class="campo-grupo" style="margin-top: 20px;">
+                <label for="filtro">Filtrar projetos</label>
+                <select id="filtro">
+                    <option value="todos">Todos</option>
+                    <option value="web">Web</option>
+                    <option value="mobile">Mobile</option>
+                </select>
+            </div>
+
+            <p id="status" role="status" class="status-mensagem"></p>
+            <p id="contador" class="contador-texto"></p>
+
+            <div class="cards" id="lista-projetos" tabindex="-1">
+                <article class="card projeto" data-categoria="web">
+                    <h3>Meu primeiro Portfólio</h3>
+                    <p>Projeto desenvolvido para a disciplina de Programação Front-End. O objetivo é aplicar na prática os conceitos de estruturação semântica, estilização com CSS moderno (Flexbox, Box Model) e responsividade.</p>
+                    <p class="tecnologias">Tecnologias: HTML e CSS</p>
+                    <a href="#sobre" class="botao">Navegar no projeto</a>
+                    <button class="remover" type="button">Remover</button>
+                </article>
+
+                <article class="card projeto" data-categoria="mobile">
+                    <h3>Modelagem de Dispositivo Inteligente</h3>
+                    <p>Aplicação em Java desenvolvida para a disciplina de Programação Orientada a Objetos (POO). O projeto foca na modelagem de estados e comportamentos dinâmicos de um dispositivo, aplicando na prática conceitos fundamentais como encapsulamento, construção de classes, controle de atributos e métodos.</p>
+                    <p class="tecnologias">Tecnologias: Java (POO)</p>
+                    <a href="#" class="botao">Repositório em construção</a>
+                    <button class="remover" type="button">Remover</button>
+                </article>
+            </div>
+        </section>
+
+        <section id="contato" class="secao">
+            <h2>Contato</h2>
+            <p>Preencha o formulário para enviar uma mensagem diretamente para o e-mail: <strong>aishasantiagonascimento@gmail.com</strong></p>
+
+            <form id="form-contato" action="https://formspree.io/f/xljbejnb" method="POST" novalidate>
+                <div id="resumo-erros" class="resumo-erros" role="alert" tabindex="-1" hidden></div>
+
+                <div class="campo-grupo">
+                    <label for="contato-nome">Nome completo <span aria-hidden="true" class="obrigatorio">*</span></label>
+                    <input type="text" id="contato-nome" name="nome" placeholder="Digite seu nome completo" required minlength="3" maxlength="80" aria-describedby="dica-nome erro-nome">
+                    <small id="dica-nome" class="dica">Entre 3 e 80 caracteres.</small>
+                    <span id="erro-nome" class="mensagem-erro" aria-live="polite"></span>
+                </div>
+
+                <div class="campo-grupo">
+                    <label for="contato-email">E-mail <span aria-hidden="true" class="obrigatorio">*</span></label>
+                    <input type="email" id="contato-email" name="email" placeholder="aishasantiagonascimento@gmail.com" required aria-describedby="dica-email erro-email">
+                    <small id="dica-email" class="dica">Informe um e-mail válido.</small>
+                    <span id="erro-email" class="mensagem-erro" aria-live="polite"></span>
+                </div>
+
+                <div class="campo-grupo">
+                    <label for="contato-motivo">Motivo do contato <span aria-hidden="true" class="obrigatorio">*</span></label>
+                    <select id="contato-motivo" name="motivo" required aria-describedby="erro-motivo">
+                        <option value="" disabled selected>Selecione um motivo...</option>
+                        <option value="Oportunidade profissional">Oportunidade profissional</option>
+                        <option value="Projeto freelance">Projeto freelance</option>
+                        <option value="Outro">Outro</option>
+                    </select>
+                    <span id="erro-motivo" class="mensagem-erro" aria-live="polite"></span>
+                </div>
+
+                <div id="container-assunto" class="campo-grupo campo-condicional" hidden>
+                    <label for="contato-assunto">Assunto adicional <span aria-hidden="true" class="obrigatorio">*</span></label>
+                    <input type="text" id="contato-assunto" name="assunto" placeholder="Especifique o assunto" minlength="5" maxlength="100" aria-describedby="dica-assunto erro-assunto">
+                    <small id="dica-assunto" class="dica">Obrigatório para o motivo "Outro" (5 a 100 caracteres).</small>
+                    <span id="erro-assunto" class="mensagem-erro" aria-live="polite"></span>
+                </div>
+
+                <div class="campo-grupo">
+                    <label for="contato-mensagem">Mensagem <span aria-hidden="true" class="obrigatorio">*</span></label>
+                    <textarea id="contato-mensagem" name="mensagem" rows="5" placeholder="Digite sua mensagem aqui..." required minlength="30" maxlength="1000" aria-describedby="dica-mensagem erro-mensagem contador-mensagem"></textarea>
+                    <div class="campo-rodape">
+                        <small id="dica-mensagem" class="dica">Mínimo 30 e máximo 1000 caracteres.</small>
+                        <small id="contador-mensagem" class="contador-caracteres" aria-live="polite">0 / 1000 caracteres</small>
+                    </div>
+                    <span id="erro-mensagem" class="mensagem-erro" aria-live="polite"></span>
+                </div>
+
+                <div class="campo-grupo opcao-teste">
+                    <label class="rotulo-checkbox">
+                        <input type="checkbox" id="simular-falha"> 
+                        [Modo de Teste] Simular falha de rede/servidor ao enviar
+                    </label>
+                </div>
+
+                <button type="submit" id="btn-enviar-contato" class="botao">Enviar mensagem</button>
+                <p id="contato-status" role="status" class="status-mensagem"></p>
+            </form>
+        </section>
+
+    </main>
+
+    <aside class="extra">
+        <h2>Informações extras</h2>
+        <p><strong>Objetivo atual:</strong> Desenvolver uma lógica de programação forte antes de avançar para frameworks complexos.</p>
+        <ul>
+            <li><strong>GitHub:</strong> <a href="https://github.com" target="_blank" rel="noopener noreferrer">Acessar plataforma</a></li>
+            <li><strong>LinkedIn:</strong> <a href="https://www.linkedin.com" target="_blank" rel="noopener noreferrer">Acessar plataforma</a></li>
+            <li><strong>Interesse:</strong> Desenvolvimento Back-End e Arquitetura de Software</li>
+        </ul>
+    </aside>
+
+    <footer class="rodape">
+        <p>© 2026 - Portfólio de Aisha Ximena</p>
+        <p>Desenvolvido como atividade da disciplina de Programação Front-End.</p>
+        <br>
+        <a href="#topo" style="color: white; font-weight: bold;">Voltar ao topo</a>
+    </footer>
+
+    <script src="script.js" defer></script>
+</body>
+</html>
